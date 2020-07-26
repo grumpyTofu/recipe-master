@@ -1,0 +1,19 @@
+.mat-card {
+    background: transparent;
+}
+
+.mat-card-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mat-card-image {
+    width: auto !important;
+    max-height: 20rem;
+}
+
+.mat-card-image-wrapper:first-child {
+    margin-top: inherit;
+}

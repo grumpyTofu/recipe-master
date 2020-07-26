@@ -1,0 +1,32 @@
+<div class="grid-container">
+    <mat-grid-list cols="2">
+        <mat-grid-tile *ngFor="let card of cards | async">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{card.title}}
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item>Expand</button>
+                            <button mat-menu-item>Remove</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src={{card.image}} />
+                <mat-card-actions>
+                    <div class='action-group left'>
+                        <mat-icon>thumb_up</mat-icon>{{card.ratings.likes}}
+                        <mat-icon>thumb_down</mat-icon>{{card.ratings.dislikes}}
+                    </div>
+                    <div class='action-group right'>
+                        <nav>
+                            <a mat-stroked-button routerLink="recipe/{{card.id}}">View</a>
+                        </nav>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

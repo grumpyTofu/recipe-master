@@ -1,0 +1,12 @@
+<mat-card *ngIf="recipe" [class.mat-elevation-z0]="true">
+    <div class='mat-card-image-wrapper'>
+        <img mat-card-image src={{recipe.thumbnail_url}} />
+    </div>
+    <mat-card-title>{{recipe.name}}</mat-card-title>
+    <mat-card-subtitle>Servings: {{recipe.num_servings}}</mat-card-subtitle>
+    <mat-card-content>
+        <ol>
+            <li *ngFor="let step of recipe.instructions">{{step.display_text}}</li>
+        </ol>
+    </mat-card-content>
+</mat-card>
