@@ -1,6 +1,11 @@
 # RecipeMaster
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+This is the 4th application in a series of 15 applications. This application integrates with the Tasty API to explore new recipes.
+
+*App 4 of 15*
+> https://blog.bitsrc.io/15-app-ideas-to-build-and-level-up-your-coding-skills-28612c72a3b1
+
+Recipe app generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
 
